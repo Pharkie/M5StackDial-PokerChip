@@ -93,10 +93,6 @@ Why PlatformIO?
 - Upload: `pio run -e m5dial -t upload`
 - Monitor: `pio device monitor -b 115200`
 
-## Keywords (searchability)
-
-M5Stack Dial, M5Stack StampS3, ESP32‑S3 round display, PlatformIO, VS Code, Arduino framework, M5Unified, M5GFX, M5Dial, rotary encoder demo, touch tap drag long press, screen brightness, starburst effect, crosshair overlay, ping shockwave, no LVGL, not MicroPython, not UIFlow 2.0.
-
 ## Event logs to serial
 
 - `[ROT] +10% -> br=70%`
@@ -109,6 +105,10 @@ M5Stack Dial, M5Stack StampS3, ESP32‑S3 round display, PlatformIO, VS Code, Ar
 - `[BTN] A hold -> starburst`
 - `[EFFECT] Starburst start/end`
 - `[PING] end`
+
+## Keywords to find
+
+M5Stack Dial, StampS3, ESP32‑S3, round display, PlatformIO, VS Code, Arduino C++, M5Unified, M5GFX, rotary encoder, touch (tap/drag/long‑press), screen brightness, demo.
 
 ---
 
