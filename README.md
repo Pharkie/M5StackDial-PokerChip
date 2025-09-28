@@ -2,7 +2,11 @@
 
 Here's a quick interactive playground for the M5Stack Dial round display which uses the S3 stamp. Rotate the dial to change brightness, tap for a ping, drag a crosshair showing X,Y, press BtnA to change colours, long press for a full screen 'starbust', and long‑press the screen to invert colours.
 
+![M5Stack Dial demo](docs/assets/m5stack-demo.gif)
+
 I made this because the manufacturer libraries and docs seem either too much or too little.
+
+The outer ring is a 'poker chip' style I 3D printed (available on request).
 
 ## Purpose
 
