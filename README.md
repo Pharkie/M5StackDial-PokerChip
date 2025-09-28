@@ -10,7 +10,7 @@ The outer ring is a 'poker chip' style I 3D printed (available on request).
 
 ## Purpose
 
-This repo is meant as a hands‑on demo of the core I/O and rendering paths on the Dial/StampS3. It shows, with minimal code and no LVGL:
+This repo is a hands‑on demo of the core I/O and rendering paths on the Dial (StampS3). Minimal code in C++, no LVGL:
 
 - Touch
   - Tap (with movement threshold) → visual ping + debug log
@@ -35,30 +35,25 @@ This repo is meant as a hands‑on demo of the core I/O and rendering paths on t
   - Event‑based logs (PRESS/DRAG/RELEASE, ROT, BTN, effects)
   - All tunables in `Config` at the top of `src/main.cpp`
 
-## Features
+## Controls
 
-- Brightness dial with watch‑face ticks (0–100%) and big percent readout
-- 6 colour themes
-- Crosshair you can drag anywhere; live X/Y coordinates
-- Tap “ping” (outline 'shockwave')
-- BtnA:
-  - Press: cycle colours
-  - Hold: starburst effect (full‑screen, two‑tone sound)
-- Long press on screen: invert display (two‑tone be‑boop)
-- Event‑based Serial debug logs (PRESS / DRAG / RELEASE, ROT, BTN, effects)
+- Rotate: brightness (0–100%), watch‑face ticks and big % readout
+- Tap: ping (outline shockwave)
+- Drag: crosshair follows finger; live X/Y
+- BtnA press: cycle colours/theme
+- BtnA hold: starburst effect (full‑screen, two‑tone sound)
+- Long press (screen): invert display (two‑tone be‑boop)
 
 ## Libraries and architecture
-
-This project is intentionally lightweight and does not use LVGL or other widget frameworks.
 
 - M5Unified — common HAL/shim for input, display, and audio across M5 devices
 - M5GFX — fast graphics backend used by M5Unified’s `Display`
 - M5Dial — glue for the StampS3 Dial hardware that exposes `Display`, `Touch`, `Encoder`, `Speaker`
 
-Why no LVGL?
-- The UI is simple and highly animated. Direct M5GFX calls have lower overhead and avoid additional buffers/complexity. Code stays small and easy to tweak.
+No LVGL
+- I may add LVGL later but first wanted a simple version. Direct M5GFX calls have lower overhead and avoid additional buffers/complexity. Code stays small and easy to tweak.
 
-How it’s wired
+How it works:
 - Display: `M5Dial.Display` (from M5Unified/M5GFX) for all drawing (lines, circles, text).
 - Touch: `M5Dial.Touch` with a tiny state machine to detect tap/drag/long‑press reliably.
 - Encoder: `M5Dial.Encoder.readAndReset()` → small accumulator → 10% logical steps, with up/down click tones.
@@ -74,6 +69,21 @@ lib_deps =
   m5stack/M5GFX
 ```
 
+## Tooling and environment
+
+This project is written in C++ and targets the Arduino framework on ESP32‑S3, using PlatformIO + VS Code for builds and dependency management.
+
+- Use PlatformIO in VS Code as configured in `platformio.ini`.
+- Language: C++ (Arduino API via M5Unified/M5GFX)
+- Not Arduino IDE: this repo expects PlatformIO’s dependency resolver, multiple envs, and reproducible builds.
+- Not MicroPython: this demo leans on fast per‑frame drawing (lines/circles, small overlay blits) and precise input timing; CPython on ESP32S3 adds overhead and different input/audio APIs.
+- Not UIFlow 2.0/LVGL: I found UIFlow 2.0 unreliable, slow and locked in. Here we draw directly with M5GFX for lower latency and simpler control.
+
+Why PlatformIO?
+- Reproducible: pins exact Espressif platform/toolchains and M5 libraries.
+- Multi‑env: dev versus release builds (debug printf on/off) with a simple flag.
+- Easy onboarding: open the folder in VS Code, click PlatformIO Build/Upload/Monitor.
+
 ## Build
 
 - Dev build (debug on):
@@ -82,6 +92,10 @@ lib_deps =
   - `pio run -e release`
 - Upload: `pio run -e m5dial -t upload`
 - Monitor: `pio device monitor -b 115200`
+
+## Keywords (searchability)
+
+M5Stack Dial, M5Stack StampS3, ESP32‑S3 round display, PlatformIO, VS Code, Arduino framework, M5Unified, M5GFX, M5Dial, rotary encoder demo, touch tap drag long press, screen brightness, starburst effect, crosshair overlay, ping shockwave, no LVGL, not MicroPython, not UIFlow 2.0.
 
 ## Event logs to serial
 
