@@ -2,6 +2,6 @@
   "C_Cpp.default.configurationProvider": "platformio",
   "platformio-ide.customPATH": "",
   "platformio-ide.customPYTHONPATH": "",
-  "platformio-ide.activateOnlyOnPlatformIOProject": true
+  "platformio-ide.activateOnlyOnPlatformIOProject": true,
+  "platformio-ide.coreDir": "/Users/adamknowles/.platformio"
 }
-

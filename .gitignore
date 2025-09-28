@@ -8,6 +8,7 @@ scripts/secrets.json
 .pio/
 .gcc-flags.json
 .clangd
+.pio-home/
 
 # Firmware binaries and maps
 firmware/*.bin
