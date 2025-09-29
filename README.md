@@ -84,13 +84,15 @@ Why PlatformIO?
 - Multi‑env: dev versus release builds (debug printf on/off) with a simple flag.
 - Easy onboarding: open the folder in VS Code, click PlatformIO Build/Upload/Monitor.
 
-## Build
+## Flash prebuilt binary
 
-- Dev build (debug on):
-  - `pio run -e m5dial`
-- Release build (debug off):
-  - `pio run -e release`
-- Upload: `pio run -e m5dial -t upload`
+  `esptool.py --chip esp32s3 --baud 921600 write_flash -z 0x0 merged-firmware.bin`
+
+## Or build yourself
+
+- Dev build (debug on): `pio run -e dev`
+- Release build (debug off): `pio run -e release`
+- Upload (dev): `pio run -e dev -t upload`
 - Monitor: `pio device monitor -b 115200`
 
 ## Event logs to serial

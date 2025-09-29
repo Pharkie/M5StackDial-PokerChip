@@ -8,8 +8,8 @@ Scope: Entire repository
   - VS Code is already configured in `.vscode/settings.json` with `"platformio-ide.coreDir": "/Users/adamknowles/.platformio"`.
 
 - Builds
-  - Build: `pio run -e m5dial`
-  - Upload: `pio run -e m5dial -t upload`
+- Build: `pio run -e dev`
+- Upload: `pio run -e dev -t upload`
   - Monitor: `pio device monitor -b 115200`
 
 - Don’ts
@@ -18,4 +18,3 @@ Scope: Entire repository
 
 - Cleanup note
   - If a `.pio-home/` folder appears in this repo, it’s a leftover local core dir and can be safely deleted.
-
