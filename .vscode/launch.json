@@ -12,9 +12,9 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug",
-            "executable": "/Users/adamknowles/Library/CloudStorage/OneDrive-Personal/Personal/Maker Projects/Poker chip/M5StackDial/ProperVersion/.pio/build/dev/firmware.elf",
+            "executable": "/Users/adamknowles/Library/CloudStorage/OneDrive-Personal/Personal/Maker Projects/Poker chip/M5StackDial/My Quick Demo - M5StackDial-m5gfx-demo - PIO, M5GFX not LVGL/.pio/build/dev/firmware.elf",
             "projectEnvName": "dev",
-            "toolchainBinDir": "/Users/adamknowles/.platformio/packages/toolchain-xtensa-esp32s3/bin",
+            "toolchainBinDir": "/Users/adamknowles/.platformio/packages/toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5/bin",
             "internalConsoleOptions": "openOnSessionStart",
             "preLaunchTask": {
                 "type": "PlatformIO",
@@ -25,18 +25,18 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (skip Pre-Debug)",
-            "executable": "/Users/adamknowles/Library/CloudStorage/OneDrive-Personal/Personal/Maker Projects/Poker chip/M5StackDial/ProperVersion/.pio/build/dev/firmware.elf",
+            "executable": "/Users/adamknowles/Library/CloudStorage/OneDrive-Personal/Personal/Maker Projects/Poker chip/M5StackDial/My Quick Demo - M5StackDial-m5gfx-demo - PIO, M5GFX not LVGL/.pio/build/dev/firmware.elf",
             "projectEnvName": "dev",
-            "toolchainBinDir": "/Users/adamknowles/.platformio/packages/toolchain-xtensa-esp32s3/bin",
+            "toolchainBinDir": "/Users/adamknowles/.platformio/packages/toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5/bin",
             "internalConsoleOptions": "openOnSessionStart"
         },
         {
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (without uploading)",
-            "executable": "/Users/adamknowles/Library/CloudStorage/OneDrive-Personal/Personal/Maker Projects/Poker chip/M5StackDial/ProperVersion/.pio/build/dev/firmware.elf",
+            "executable": "/Users/adamknowles/Library/CloudStorage/OneDrive-Personal/Personal/Maker Projects/Poker chip/M5StackDial/My Quick Demo - M5StackDial-m5gfx-demo - PIO, M5GFX not LVGL/.pio/build/dev/firmware.elf",
             "projectEnvName": "dev",
-            "toolchainBinDir": "/Users/adamknowles/.platformio/packages/toolchain-xtensa-esp32s3/bin",
+            "toolchainBinDir": "/Users/adamknowles/.platformio/packages/toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5/bin",
             "internalConsoleOptions": "openOnSessionStart",
             "loadMode": "manual"
         }

@@ -1,6 +1,8 @@
-# MStack Dial Quick Demo
+# M5Stack Dial Quick M5GFX Demo (PlatformIO, not ESP-IDF, not LVGL)
 
-Here's a quick interactive playground for the M5Stack Dial round display which uses the S3 stamp. Rotate the dial to change brightness, tap for a ping, drag a crosshair showing X,Y, press BtnA to change colours, long press for a full screen 'starbust', and long‑press the screen to invert colours.
+Here's a quick interactive playground for the M5Stack Dial round display which uses the S3 stamp. Rotate the dial to change brightness, tap for an expanding circular 'ping', drag a crosshair showing X,Y, press BtnA to change colours, long press for a full screen 'starbust', and long‑press the screen to invert colours.
+
+It’s C++ (not MicroPython), built with PlatformIO using the Arduino (not ESP-IDF) framework on ESP32‑S3, and uses M5GFX directly (not LVGL). Libraries used are M5Dial, M5Unified, M5GFX. These seem, to me, some of the main technical design choices you face with the M5Stack Dial, and my other repos will explore the other options.
 
 ![M5Stack Dial demo](docs/assets/m5stack-demo.gif)
 
